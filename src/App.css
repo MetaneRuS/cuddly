@@ -1,0 +1,106 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #dee2e6;
+  box-sizing: border-box;
+}
+
+.App {
+  margin: 0 auto;
+  width: 75%;
+  font-family: sans-serif;
+  color: #212529;
+  font-size: 14px;
+}
+
+.container, .albums {
+  text-align: center;
+}
+
+.container {
+  margin-top: 5%;
+}
+
+.form-input {
+  text-align: center;
+  background-color: transparent;
+  font-size: 32px;
+  width: 100%;
+  outline: 0;
+  border-width: 0 0 1px;
+  border-color: black;
+}
+
+.similarArtists {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.similarArtists h1 {
+  margin: 0;
+  font-size: medium;
+  text-align: center;
+}
+
+.similarArtist {
+  margin: 0 auto;
+  font-size: 10px;
+  flex-basis: 40%;
+  margin-top: 1%;
+  background-color: white;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.similarArtist:hover {
+  color: red;
+}
+
+.albums {
+  width: 100%;
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.album {
+  background-color: white;
+  flex-basis: 30%;
+  margin: 1%;
+  border-radius: 5%;
+}
+
+.album:hover {
+  color: red;
+  cursor: pointer;
+}
+
+.album img {
+  width: 100%;
+  border-radius: 5% 5% 0 0;
+}
+
+@media (max-width:641px) {
+  .App {
+    width: 90%;
+  }
+
+  .similarArtist {
+    margin: 2% auto;
+    text-align: center;
+  }
+
+  .album {
+    flex-basis: 100%;
+    margin-top: 5%;
+  }
+}
+
+@media (max-width:1025px) {
+  .similarArtist {
+    margin: 1% auto;
+    text-align: center;
+    flex-basis: 40%;
+  }
+}
