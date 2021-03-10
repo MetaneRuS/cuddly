@@ -10,21 +10,21 @@ class App extends React.Component {
   getData = async artist => {
     this.setState({searchQ: artist});
 
-    await fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/search/artist?q=${artist}`)
+    await fetch(`https://cors.bridged.cc/https://api.deezer.com/search/artist?q=${artist}`)
       .then(response => response.json())
       .then(data => this.setState({artistID: data.data[0].id}))
       .catch((error) => {
         this.setState({artistID: 0});
       })
 
-    await fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/${this.state.artistID}/albums?limit=50`)
+    await fetch(`https://cors.bridged.cc/https://api.deezer.com/artist/${this.state.artistID}/albums?limit=50`)
       .then(response => response.json())
       .then(data => this.setState({albums: data.data}))
       .catch((error) => {
         this.setState({albums: []});
       })
 
-      await fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/${this.state.artistID}/related?limit=10`)
+      await fetch(`https://cors.bridged.cc/https://api.deezer.com/artist/${this.state.artistID}/related?limit=10`)
         .then(response => response.json())
         .then(data => this.setState({similarArtist: data.data}))
         .catch((error) => {
