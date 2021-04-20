@@ -18,7 +18,7 @@ class SearchBar extends React.Component {
             <div className="container">
                 <h1 className="header">Search for an artist to find out about his discography</h1>
                 <form onSubmit={this.onFormSubmit}>
-                    <input className="form-input" type="Text" value={this.state.artist} placeholder={this.props.text} onChange={this.handleChange
+                    <input className="form-input" type="Text" value={this.state.artist} placeholder="e.g. Linkin Park" onChange={this.handleChange
                     } />
                 </form>
             </div>
